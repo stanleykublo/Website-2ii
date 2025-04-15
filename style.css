@@ -53,6 +53,7 @@ body {
     color: white;
     position: relative;
     overflow: hidden;
+    text-align: center; /* This line centers all inline content */
 }
 
 /* Create a pulsing rainbow border */
