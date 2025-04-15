@@ -34,6 +34,7 @@ body {
     color: white;
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
 /* Create a pulsing rainbow border */
