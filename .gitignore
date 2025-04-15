@@ -21,3 +21,6 @@ yarn-error.log*
 *.tmp
 *.swp
 *~
+
+assets/hi-res/
+
