@@ -1,0 +1,209 @@
+/* Load the Regular font */
+@font-face {
+    font-family: 'Alte Haas Grotesk';
+    src: url('fonts/alte-haas-grotesk/AlteHaasGrotesk.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Load the Bold font */
+@font-face {
+    font-family: 'Alte Haas Grotesk';
+    src: url('fonts/alte-haas-grotesk/AlteHaasGroteskBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+    
+}
+
+a.clean-link {
+    color: inherit; /* Keeps it the same color as surrounding text */
+    text-decoration: none; /* Removes underline */
+    border-bottom: 1px dotted currentColor; /* Subtle visual cue */
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+a.clean-link:hover {
+    color: #ccc; /* Slightly lighter on hover */
+    border-bottom: 1px solid currentColor; /* Stronger underline on hover */
+    cursor: pointer;
+}
+
+
+/* Allow scrolling */
+html, body {
+    height: auto;
+    min-height: 100vh; /* Ensure body can grow but never shrink below viewport height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Apply the fonts to the body */
+body {
+    font-family: 'Alte Haas Grotesk', sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: #40404f; /* Payne's Grey background */
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Create a pulsing rainbow border */
+body::before {
+    content: '';
+    position: fixed;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    z-index: -1; /* Keeps the rainbow behind everything */
+    animation: pulse-border 6s linear infinite; /* Hue rotation animation */
+}
+
+/* Inner Payne's Grey frame */
+body::after {
+    content: '';
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background-color: #40404f; /* Payne’s Grey inside */
+    z-index: -1; /* Keeps it behind the content but above the rainbow */
+    min-height: 100%; /* Ensures it expands with content */
+}
+
+/* Hue rotation animation for pulsing effect */
+@keyframes pulse-border {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(180deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* Style for all headings (h1 to h6) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Alte Haas Grotesk', sans-serif;
+    font-weight: bold;
+    text-align: center;  /* Center align all headings */
+
+    
+}
+
+h2 {
+    display: block;
+    margin-bottom: 0px;
+    font-size: 20px; /* Adjust as needed */
+}
+h4 {
+    margin-top: -5px; /* Adjust this value as needed */
+    text-align: center;
+}
+h5 {
+    margin-top: -5px; /* Adjust this value as needed */
+    text-align: center;
+}
+/* Center the videos (iframe) */
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 0 !;
+}
+
+/* Ensure iframe has no extra margins and apply width/height */
+iframe {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 640px;
+    height: 360px;
+    border: none;
+}
+
+/* Thumbnail Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(382px, 1fr));
+    gap: 30px 15px; /* First value = row gap, second value = column gap */
+    justify-content: center;
+    margin-top: 30px;
+}
+.grid-container a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Keeps the text color the same as the rest of the page */
+}
+
+.grid-container a:hover h2 {
+    text-decoration: none; /* Adds an underline on hover for better UX */
+}
+
+.grid-item img {
+    display: block; /* Ensures no extra space below the image */
+    margin-bottom: 5px; /* Adjust this value as needed */
+}
+
+.grid-item h2 {
+    margin-top: 0px; /* Removes extra spacing above the title */
+}
+/* Page Layout */
+.content-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Master Media (Image or Video) */
+.main-media {
+    flex: 2;
+    max-width: 1000px;
+    justify-content: center; 
+    min-height: 300px; /* Prevents it from collapsing */
+    max-width: 1000px;
+
+}
+
+.main-media img, 
+.main-media iframe {
+    width: 100%;
+    border: 0px solid white;
+    display: flex;
+}
+/* Sub-Photos in a 2x2 Grid */
+.subphotos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+    gap: 10px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.subphotos img {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Adjust as needed */
+    object-fit: cover;
+    display: block;
+}
+
+.thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Keeps images proportional */
+    object-fit: cover;
+    border: 0px solid white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+}
+
