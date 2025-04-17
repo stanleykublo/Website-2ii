@@ -84,6 +84,10 @@ body::after {
     min-height: 100%; /* Ensures it expands with content */
 }
 
+body.subpage {
+    text-align: left;
+  }  
+
 /* Hue rotation animation for pulsing effect */
 @keyframes pulse-border {
     0% {
