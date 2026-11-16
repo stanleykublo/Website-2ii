@@ -1,79 +1,203 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WR SAUNDERS</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Art — WR Saunders</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>WR SAUNDERS</h1>
-    <p><h3>is a British artist and filmmaker on a Precambrian hilltop in England</h3></p>
-       <br><a href="https://www.instagram.com/wrsaunders_/" target="_blank" rel="noopener noreferrer" class="clean-link"> @wrsaunders_</a>
-
-       <br>
-    <div class="grid-container">
-        <a href="guardian-angel.html" class="grid-item">
-            <img src="thumbnails/guardian-angel.webp" alt="Guardian Angel (2025)" class="thumbnail">
-            <h2>Guardian Angel (2025)</h2>
-    
+    <link rel="stylesheet" href="site-enhancements.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <h1 class="site-heading"><a href="index.html">WR SAUNDERS</a></h1>
+      <p class="site-tagline">is a British artist and filmmaker on a Precambrian hilltop in England</p>
+    </header>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a aria-current="page" href="index.html">Art</a>
+      <a href="film.html">Film</a>
+      <a href="selected-credits.html">Credits</a>
+      <a href="about.html">About</a>
+    </nav>
+    <main class="site-index">
+      <div class="filter-controls" role="group" aria-label="Filter works">
+        <button aria-pressed="true" class="filter-button" data-filter="all" type="button">All</button>
+        <button aria-pressed="false" class="filter-button" data-filter="moving-image" type="button">Moving image</button>
+        <button aria-pressed="false" class="filter-button" data-filter="installation" type="button">Installations &amp; objects</button>
+      </div>
+      <!-- Each artwork is a single card. Keep the image, title and year. -->
+      <div class="grid-container filterable-gallery" data-gallery="">
+        <!-- Antecedent Wayfinder (2024) -->
+        <a
+          class="grid-item"
+          data-category="moving-image"
+          href="antecedent-wayfinder.html"
+        >
+          <img
+            class="thumbnail"
+            src="thumbnails/antecedent.webp"
+            alt="Artwork image for Antecedent Wayfinder"
+            loading="lazy"
+          >
+          <h2>Antecedent Wayfinder <span class="year">(2024)</span></h2>
         </a>
 
-        <a href="spectrum-decay.html" class="grid-item">
-            <img src="thumbnails/spectrum-decay.jpg" alt="Spectrum and Decay (2024)" class="thumbnail">
-            <h2>Spectrum and Decay (2024)</h2>
+        <!-- Spectrum and Decay (2024) -->
+        <a
+          class="grid-item"
+          data-category="moving-image"
+          href="spectrum-decay.html"
+        >
+          <img
+            class="thumbnail"
+            src="thumbnails/spectrum-decay.jpg"
+            alt="Still from Spectrum and Decay"
+            loading="lazy"
+          >
+          <h2>Spectrum and Decay <span class="year">(2024)</span></h2>
         </a>
 
-        <a href="final-demand.html" class="grid-item">
-            <img src="thumbnails/final-demand.png" alt="Final Demand (2023)" class="thumbnail">
-            <h2>Final Demand (2023)</h2>
+        <!-- Fixing a Hole (2022) -->
+        <a
+          class="grid-item"
+          data-category="moving-image"
+          href="fixing-a-hole.html"
+        >
+          <img
+            class="thumbnail"
+            src="thumbnails/fixing-hole.jpg"
+            alt="Still from Fixing a Hole"
+            loading="lazy"
+          >
+          <h2>Fixing a Hole <span class="year">(2022)</span></h2>
         </a>
 
-        <a href="fixing-a-hole.html" class="grid-item">
-            <img src="thumbnails/fixing-hole.jpg" alt="Fixing a Hole (2022)" class="thumbnail">
-            <h2>Fixing a Hole (2022)</h2>
+        <!-- One Day as I Was Driving Home (2021) -->
+        <a
+          class="grid-item"
+          data-category="moving-image"
+          href="one-day.html"
+        >
+          <img
+            class="thumbnail"
+            src="thumbnails/one-day.jpg"
+            alt="Still from One Day as I Was Driving Home"
+            loading="lazy"
+          >
+          <h2>One Day as I Was Driving Home <span class="year">(2021)</span></h2>
         </a>
 
-        <a href="one-day.html" class="grid-item">
-            <img src="thumbnails/one-day.jpg" alt="One Day as I was Driving Home (2021)" class="thumbnail">
-            <h2>One Day as I was Driving Home (2021)</h2>
+        <!-- Goodbyes and So Longs (2020) -->
+        <a
+          class="grid-item"
+          data-category="installation"
+          href="goodbyes-and-so-longs.html"
+        >
+          <img
+            class="thumbnail"
+            src="thumbnails/goodbyes.jpg"
+            alt="Artwork image for Goodbyes and So Longs"
+            loading="lazy"
+          >
+          <h2>Goodbyes and So Longs <span class="year">(2020)</span></h2>
         </a>
 
-        <a href="come-on-elon.html" class="grid-item">
-            <img src="thumbnails/elon.png" alt="Come on Elon (2021)" class="thumbnail">
-            <h2>Come on Elon (2021)</h2>
+        <!-- The Longest Journey Is the Journey Inward (2020) -->
+        <a
+          class="grid-item"
+          data-category="moving-image"
+          href="longest-journey.html"
+        >
+          <img
+            class="thumbnail"
+            src="thumbnails/longest-journey.jpg"
+            alt="Still from The Longest Journey Is the Journey Inward"
+            loading="lazy"
+          >
+          <h2>The Longest Journey Is the Journey Inward <span class="year">(2020)</span></h2>
         </a>
 
-        <a href="on-paper.html" class="grid-item">
-            <img src="thumbnails/on-paper.png" alt="On Paper" class="thumbnail">
-            <h2>On Paper (2021)</h2>
+        <!-- How I Got Lost (2014) -->
+        <a
+          class="grid-item"
+          data-category="moving-image"
+          href="how-i-got-lost.html"
+        >
+          <img
+            class="thumbnail"
+            src="thumbnails/got-lost.jpg"
+            alt="Still from How I Got Lost"
+            loading="lazy"
+          >
+          <h2>How I Got Lost <span class="year">(2014)</span></h2>
         </a>
 
-        <a href="longest-journey.html" class="grid-item">
-            <img src="thumbnails/longest-journey.jpg" alt="The Longest Journey is the Journey Inwards (2020)" class="thumbnail">
-            <h2>The Longest Journey is the Journey Inward (2020)</h2>
-        </a>
-        <a href="sarkology.html" class="grid-item">
-            <img src="thumbnails/sarkology.png" alt="Sarkology (2019)" class="thumbnail">
-            <h2>Sarkology (2019)</h2>
+        <!-- Life Is Long If You Know How to Live It (2013) -->
+        <a
+          class="grid-item"
+          data-category="installation"
+          href="life-is-long.html"
+        >
+          <img
+            class="thumbnail"
+            src="thumbnails/life-long.jpg"
+            alt="Artwork image for Life Is Long If You Know How to Live It"
+            loading="lazy"
+          >
+          <h2>Life Is Long If You Know How to Live It <span class="year">(2013)</span></h2>
         </a>
 
-        <a href="how-i-got-lost.html" class="grid-item">
-            <img src="thumbnails/got-lost.jpg" alt="How I Got Lost (2014)" class="thumbnail">
-            <h2>How I Got Lost (2014)</h2>
+        <!-- Olympic Sized (2013) -->
+        <a
+          class="grid-item"
+          data-category="moving-image"
+          href="olympic-sized.html"
+        >
+          <img
+            class="thumbnail"
+            src="thumbnails/olympic.png"
+            alt="Still from Olympic Sized"
+            loading="lazy"
+          >
+          <h2>Olympic Sized <span class="year">(2013)</span></h2>
         </a>
-        <a href="olympic-sized.html" class="grid-item">
-            <img src="thumbnails/olympic.png" alt="Olympic Sized (2013)" class="thumbnail">
-            <h2>Olympic Sized (2013)</h2>
+
+        <!-- Look Upon My Works, Ye Mighty (2012) -->
+        <a
+          class="grid-item"
+          data-category="installation"
+          href="look-upon-my-works.html"
+        >
+          <img
+            class="thumbnail"
+            src="thumbnails/look-upon.JPG"
+            alt="Artwork image for Look Upon My Works, Ye Mighty"
+            loading="lazy"
+          >
+          <h2>Look Upon My Works, Ye Mighty <span class="year">(2012)</span></h2>
         </a>
-    </a>
-    <a href="merz-burn.html" class="grid-item">
-        <img src="thumbnails/merz-burn.jpg" alt="Earth Burn at the Merz Barn (2011)" class="thumbnail">
-        <h2>Earth Burn at the Merz Barn (2012)</h2>
-    </a>
-    
-    </div>
-    <br> <br> <br> <br> 
-    <p>Copyright WR Saunders 2025</p>
-</body>
+
+        <!-- Earth Burn at the Merz Barn (2011) -->
+        <a
+          class="grid-item"
+          data-category="moving-image"
+          href="merz-burn.html"
+        >
+          <img
+            class="thumbnail"
+            src="thumbnails/merz-burn.jpg"
+            alt="Still from Earth Burn at the Merz Barn"
+            loading="lazy"
+          >
+          <h2>Earth Burn at the Merz Barn <span class="year">(2011)</span></h2>
+        </a>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <a href="https://www.instagram.com/wrsaunders_/" rel="noopener noreferrer" target="_blank">@wrsaunders_</a>
+      <span aria-hidden="true"> · </span>
+      &copy; <span data-copyright-year>2026</span> WR Saunders
+    </footer>
+    <script src="site-filters.js" defer></script>
+    <script src="site-year.js" defer></script>
+  </body>
 </html>
