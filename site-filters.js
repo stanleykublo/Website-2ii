@@ -1,4 +1,3 @@
-/* Small progressive-enhancement filter; the full gallery remains visible without JavaScript. */
 document.querySelectorAll('.filter-controls').forEach((group) => {
   const gallery = group.parentElement.querySelector('[data-gallery]');
   if (!gallery) return;

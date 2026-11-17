@@ -1,4 +1,3 @@
-/* Load the Regular font */
 @font-face {
     font-family: 'Alte Haas Grotesk';
     src: url('fonts/alte-haas-grotesk/AlteHaasGrotesk.ttf') format('truetype');
@@ -6,38 +5,33 @@
     font-style: normal;
 }
 
-/* Load the Bold font */
 @font-face {
     font-family: 'Alte Haas Grotesk';
     src: url('fonts/alte-haas-grotesk/AlteHaasGroteskBold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 
-    
 }
 
-/* Allow scrolling */
 html, body {
     height: auto;
-    min-height: 100vh; /* Ensure body can grow but never shrink below viewport height */
-    overflow-y: auto; /* Enable vertical scrolling */
+    min-height: 100vh; 
+    overflow-y: auto; 
 }
 
-/* Apply the fonts to the body */
 body {
     font-family: 'Alte Haas Grotesk', sans-serif;
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
     line-height: 1.6;
-    background-color: #40404f; /* Payne's Grey background */
+    background-color: #40404f; 
     color: white;
     position: relative;
     overflow: hidden;
     text-align: center;
 }
 
-/* Create a pulsing rainbow border */
 body::before {
     content: '';
     position: fixed;
@@ -46,12 +40,11 @@ body::before {
     right: -5px;
     bottom: -5px;
     background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
-    z-index: -1; /* Keeps the rainbow behind everything */
-    animation: pulse-border 6s linear infinite; /* Hue rotation animation */
+    z-index: -1; 
+    animation: pulse-border 6s linear infinite; 
     
 }
 
-/* Inner Payne's Grey frame */
 body::after {
     content: '';
     position: fixed;
@@ -59,17 +52,15 @@ body::after {
     left: 10px;
     right: 10px;
     bottom: 10px;
-    background-color: #40404f; /* Payne’s Grey inside */
-    z-index: -1; /* Keeps it behind the content but above the rainbow */
-    min-height: 100%; /* Ensures it expands with content */
+    background-color: #40404f; 
+    z-index: -1; 
+    min-height: 100%; 
 }
 
 body.subpage {
     text-align: left;
   }
-  
 
-/* Hue rotation animation for pulsing effect */
 @keyframes pulse-border {
     0% {
         filter: hue-rotate(0deg);
@@ -82,56 +73,51 @@ body.subpage {
     }
 }
 
-/* Style for all headings (h1 to h6) */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Alte Haas Grotesk', sans-serif;
     font-weight: bold;
-    text-align: center;  /* Center align all headings */
+    text-align: center;  
 }
 
 h2 {
     display: block;
     margin-bottom: 0px;
-    font-size: 20px; /* Adjust as needed */
+    font-size: 20px; 
 }
 h4 {
-    margin-top: -5px; /* Adjust this value as needed */
+    margin-top: -5px; 
     text-align: center;
 }
 h5 {
-    margin-top: -5px; /* Adjust this value as needed */
+    margin-top: -5px; 
     text-align: center;
 }
 
-/* Ensure iframe has no extra margins and apply width/height */
-
-
-/* Thumbnail Grid */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(382px, 1fr));
-    gap: 30px 15px; /* First value = row gap, second value = column gap */
+    gap: 30px 15px; 
     justify-content: center;
     margin-top: 30px;
 }
 .grid-container a {
-    text-decoration: none; /* Removes the underline */
-    color: inherit; /* Keeps the text color the same as the rest of the page */
+    text-decoration: none; 
+    color: inherit; 
 }
 
 .grid-container a:hover h2 {
-    text-decoration: none; /* Adds an underline on hover for better UX */
+    text-decoration: none; 
 }
 
 .grid-item img {
-    display: block; /* Ensures no extra space below the image */
-    margin-bottom: 5px; /* Adjust this value as needed */
+    display: block; 
+    margin-bottom: 5px; 
 }
 
 .grid-item h2 {
-    margin-top: 0px; /* Removes extra spacing above the title */
+    margin-top: 0px; 
 }
-/* Page Layout */
+
 .content-container {
     display: flex;
     align-items: flex-start;
@@ -139,22 +125,20 @@ h5 {
     margin-top: 20px;
 }
 
-/* Master Media (Image or Video) */
 .main-media {
     flex: 2;
     max-width: 1000px;
     justify-content: center; 
-    min-height: 300px; /* Prevents it from collapsing */
+    min-height: 300px; 
     max-width: 1000px;
 
 }
-
 
 .main-media img {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: contain; /* or remove this line */
+    object-fit: contain; 
     max-width: 100%;
 }
 
@@ -163,7 +147,7 @@ h5 {
     border: 0px solid white;
     display: flex;
 }
-/* Apply only to subpages */
+
 .subpage .content-container {
     display: flex;
     flex-direction: column;
@@ -172,10 +156,9 @@ h5 {
     margin: auto;
 }
 
-/* Center the Main Media (Image or Video) */
 .subpage .main-media {
     width: 100%;
-    max-width: 1000px; /* Adjust as needed */
+    max-width: 1000px; 
     display: flex;
     justify-content: center;
 }
@@ -183,35 +166,33 @@ h5 {
 .subpage .main-media img {
     width: 100%;
     height: auto;
-    max-width: 1000px; /* Ensures it doesn't stretch too much */
+    max-width: 1000px; 
     display: block;
 }
 .subpage .main-media iframe {
     width: 100%;
     height: auto;
-    max-width: 1000px; /* Ensures it doesn't stretch too much */
+    max-width: 1000px; 
     display: block;
-    margin-bottom: 20px; /* Adjust as needed */
+    margin-bottom: 20px; 
 }
 
-/* Sub-Photos Grid (2x2) */
 .subpage .subphotos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2x2 layout */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 10px;
     max-width: 800px;
-    margin: 20px auto; /* Adds space below the main image */
+    margin: 20px auto; 
 }
 
 .subpage .subphotos img {
     width: 100%;
     height: auto;
-    max-width: 400px; /* Adjust per your design */
+    max-width: 400px; 
     object-fit: cover;
     display: block;
 }
 
-/* Text description under images */
 .subpage .text-description {
     max-width: 800px;
     margin: 20px auto;

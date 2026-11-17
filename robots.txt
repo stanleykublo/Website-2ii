@@ -1,11 +1,6 @@
-# WR Saunders — robots.txt
-# Ordinary web search and human browsing remain permitted.
-# Please do not collect this site's content for AI model training.
-
 User-agent: *
 Allow: /
 
-# Training-specific crawlers / data-use controls
 User-agent: GPTBot
 Disallow: /
 
@@ -27,7 +22,5 @@ Disallow: /
 User-agent: Bytespider
 Disallow: /
 
-# Emerging AI training-use preference (IETF draft, November 2026).
-# It is not yet a universal standard.
 User-agent: __usage_ai-training
 Disallow: /
