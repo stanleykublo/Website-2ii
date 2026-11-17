@@ -162,11 +162,6 @@
   margin: 0 auto 55px;
 }
 
-.project-page .deck {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
 .project-page .credits {
   margin-top: 25px;
   opacity: .95;
@@ -261,11 +256,6 @@
     transition: none !important;
   }
 
-}
-
-.site-article .article-lead {
-  font-size: 17px;
-  line-height: 1.7;
 }
 
 .site-article p {
